@@ -1,0 +1,314 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "env.Scripts.activate_this",
+        "description": "env.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "getColorName",
+        "kind": 2,
+        "importPath": "static.python-project-color-detection.color_detection",
+        "description": "static.python-project-color-detection.color_detection",
+        "peekOfCode": "def getColorName(R,G,B):\n    minimum = 10000\n    for i in range(len(csv)):\n        d = abs(R- int(csv.loc[i,\"R\"])) + abs(G- int(csv.loc[i,\"G\"]))+ abs(B- int(csv.loc[i,\"B\"]))\n        if(d<=minimum):\n            minimum = d\n            cname = csv.loc[i,\"color_name\"]\n    return cname\n#function to get x,y coordinates of mouse double click\ndef draw_function(event, x,y,flags,param):",
+        "detail": "static.python-project-color-detection.color_detection",
+        "documentation": {}
+    },
+    {
+        "label": "draw_function",
+        "kind": 2,
+        "importPath": "static.python-project-color-detection.color_detection",
+        "description": "static.python-project-color-detection.color_detection",
+        "peekOfCode": "def draw_function(event, x,y,flags,param):\n    if event == cv2.EVENT_LBUTTONDBLCLK:\n        global b,g,r,xpos,ypos, clicked\n        clicked = True\n        xpos = x\n        ypos = y\n        b,g,r = img[y,x]\n        b = int(b)\n        g = int(g)\n        r = int(r)",
+        "detail": "static.python-project-color-detection.color_detection",
+        "documentation": {}
+    },
+    {
+        "label": "ap",
+        "kind": 5,
+        "importPath": "static.python-project-color-detection.color_detection",
+        "description": "static.python-project-color-detection.color_detection",
+        "peekOfCode": "ap = argparse.ArgumentParser()\nap.add_argument('-i', '--image', required=True, help=\"Image Path\")\nargs = vars(ap.parse_args())\nimg_path = args['image']\n#Reading the image with opencv\nimg = cv2.imread(img_path)\n#declaring global variables (are used later on)\nclicked = False\nr = g = b = xpos = ypos = 0\n#Reading csv file with pandas and giving names to each column",
+        "detail": "static.python-project-color-detection.color_detection",
+        "documentation": {}
+    },
+    {
+        "label": "args",
+        "kind": 5,
+        "importPath": "static.python-project-color-detection.color_detection",
+        "description": "static.python-project-color-detection.color_detection",
+        "peekOfCode": "args = vars(ap.parse_args())\nimg_path = args['image']\n#Reading the image with opencv\nimg = cv2.imread(img_path)\n#declaring global variables (are used later on)\nclicked = False\nr = g = b = xpos = ypos = 0\n#Reading csv file with pandas and giving names to each column\nindex=[\"color\",\"color_name\",\"hex\",\"R\",\"G\",\"B\"]\ncsv = pd.read_csv('colors.csv', names=index, header=None)",
+        "detail": "static.python-project-color-detection.color_detection",
+        "documentation": {}
+    },
+    {
+        "label": "img_path",
+        "kind": 5,
+        "importPath": "static.python-project-color-detection.color_detection",
+        "description": "static.python-project-color-detection.color_detection",
+        "peekOfCode": "img_path = args['image']\n#Reading the image with opencv\nimg = cv2.imread(img_path)\n#declaring global variables (are used later on)\nclicked = False\nr = g = b = xpos = ypos = 0\n#Reading csv file with pandas and giving names to each column\nindex=[\"color\",\"color_name\",\"hex\",\"R\",\"G\",\"B\"]\ncsv = pd.read_csv('colors.csv', names=index, header=None)\n#function to calculate minimum distance from all colors and get the most matching color",
+        "detail": "static.python-project-color-detection.color_detection",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "static.python-project-color-detection.color_detection",
+        "description": "static.python-project-color-detection.color_detection",
+        "peekOfCode": "img = cv2.imread(img_path)\n#declaring global variables (are used later on)\nclicked = False\nr = g = b = xpos = ypos = 0\n#Reading csv file with pandas and giving names to each column\nindex=[\"color\",\"color_name\",\"hex\",\"R\",\"G\",\"B\"]\ncsv = pd.read_csv('colors.csv', names=index, header=None)\n#function to calculate minimum distance from all colors and get the most matching color\ndef getColorName(R,G,B):\n    minimum = 10000",
+        "detail": "static.python-project-color-detection.color_detection",
+        "documentation": {}
+    },
+    {
+        "label": "clicked",
+        "kind": 5,
+        "importPath": "static.python-project-color-detection.color_detection",
+        "description": "static.python-project-color-detection.color_detection",
+        "peekOfCode": "clicked = False\nr = g = b = xpos = ypos = 0\n#Reading csv file with pandas and giving names to each column\nindex=[\"color\",\"color_name\",\"hex\",\"R\",\"G\",\"B\"]\ncsv = pd.read_csv('colors.csv', names=index, header=None)\n#function to calculate minimum distance from all colors and get the most matching color\ndef getColorName(R,G,B):\n    minimum = 10000\n    for i in range(len(csv)):\n        d = abs(R- int(csv.loc[i,\"R\"])) + abs(G- int(csv.loc[i,\"G\"]))+ abs(B- int(csv.loc[i,\"B\"]))",
+        "detail": "static.python-project-color-detection.color_detection",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "static.python-project-color-detection.color_detection",
+        "description": "static.python-project-color-detection.color_detection",
+        "peekOfCode": "r = g = b = xpos = ypos = 0\n#Reading csv file with pandas and giving names to each column\nindex=[\"color\",\"color_name\",\"hex\",\"R\",\"G\",\"B\"]\ncsv = pd.read_csv('colors.csv', names=index, header=None)\n#function to calculate minimum distance from all colors and get the most matching color\ndef getColorName(R,G,B):\n    minimum = 10000\n    for i in range(len(csv)):\n        d = abs(R- int(csv.loc[i,\"R\"])) + abs(G- int(csv.loc[i,\"G\"]))+ abs(B- int(csv.loc[i,\"B\"]))\n        if(d<=minimum):",
+        "detail": "static.python-project-color-detection.color_detection",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 5,
+        "importPath": "static.python-project-color-detection.color_detection",
+        "description": "static.python-project-color-detection.color_detection",
+        "peekOfCode": "csv = pd.read_csv('colors.csv', names=index, header=None)\n#function to calculate minimum distance from all colors and get the most matching color\ndef getColorName(R,G,B):\n    minimum = 10000\n    for i in range(len(csv)):\n        d = abs(R- int(csv.loc[i,\"R\"])) + abs(G- int(csv.loc[i,\"G\"]))+ abs(B- int(csv.loc[i,\"B\"]))\n        if(d<=minimum):\n            minimum = d\n            cname = csv.loc[i,\"color_name\"]\n    return cname",
+        "detail": "static.python-project-color-detection.color_detection",
+        "documentation": {}
+    },
+    {
+        "label": "upload",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def upload():  \n    return render_template(\"file_upload.html\")  \n@app.route('/success', methods = ['POST'])  \ndef success():  \n    if request.method == 'POST':  \n        f = request.files['file']  \n        f.save(f.filename)  \n        return render_template(\"success.html\", name = f.filename) \n@app.route('/index.html')\ndef hello_world():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "success",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def success():  \n    if request.method == 'POST':  \n        f = request.files['file']  \n        f.save(f.filename)  \n        return render_template(\"success.html\", name = f.filename) \n@app.route('/index.html')\ndef hello_world():\n    return render_template('index.html')\n@app.route('/logIn.html')\ndef login():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "hello_world",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def hello_world():\n    return render_template('index.html')\n@app.route('/logIn.html')\ndef login():\n    return render_template('logIn.html')\n@app.route('/started.html')\ndef started():\n    return render_template('started.html')\n@app.route('/library.html')\ndef library():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def login():\n    return render_template('logIn.html')\n@app.route('/started.html')\ndef started():\n    return render_template('started.html')\n@app.route('/library.html')\ndef library():\n    return  render_template('library.html')\n@app.route('/music')\ndef music():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "started",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def started():\n    return render_template('started.html')\n@app.route('/library.html')\ndef library():\n    return  render_template('library.html')\n@app.route('/music')\ndef music():\n    return 'music page '\nif __name__ == \"__main__\":\n    app.run(debug=True )",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "library",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def library():\n    return  render_template('library.html')\n@app.route('/music')\ndef music():\n    return 'music page '\nif __name__ == \"__main__\":\n    app.run(debug=True )",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "music",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def music():\n    return 'music page '\nif __name__ == \"__main__\":\n    app.run(debug=True )",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/')  \ndef upload():  \n    return render_template(\"file_upload.html\")  \n@app.route('/success', methods = ['POST'])  \ndef success():  \n    if request.method == 'POST':  \n        f = request.files['file']  \n        f.save(f.filename)  \n        return render_template(\"success.html\", name = f.filename) ",
+        "detail": "app",
+        "documentation": {}
+    }
+]
